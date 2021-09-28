@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MVentasVentaNueva from './pages/MVentasVentaNueva';
+import MUsuariosLista from './pages/MUsuariosLista';
 
 ReactDOM.render(
-<MVentasVentaNueva></MVentasVentaNueva>,
+ <MUsuariosLista></MUsuariosLista>,
   document.getElementById('root')
 );
 
