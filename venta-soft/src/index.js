@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MVentasVentaNueva from './pages/MVentasVentaNueva';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+<MVentasVentaNueva></MVentasVentaNueva>,
   document.getElementById('root')
 );
 
