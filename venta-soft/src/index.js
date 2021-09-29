@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MVentasVentaNueva from './pages/MVentasVentaNueva';
+import MHome from './pages/MHome';
 
 ReactDOM.render(
   
-    <App />
+    <MHome />
   ,
+
   document.getElementById('root')
 );
 
