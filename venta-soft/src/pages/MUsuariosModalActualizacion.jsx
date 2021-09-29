@@ -5,7 +5,7 @@ const MUsuariosModalActualizacion = () => {
     <div>
       <main>
         <section id="Titulares" align="center">
-          <h1>Modal Info Usuarios-Muestra 1</h1>
+          <h1>Modal Actualizacion Info Usuarios-Muestra 1</h1>
           <h2>Actualización información de usuarios</h2>
         </section>
 
@@ -13,7 +13,7 @@ const MUsuariosModalActualizacion = () => {
           <form>
             <label for="Nombre y apellido">Nombre y apellido </label>
             <input
-              type="codigo-producto"
+              type="text"
               class="controls"
               name=""
               placeholder="Juan Ossa"
@@ -23,7 +23,7 @@ const MUsuariosModalActualizacion = () => {
 
             <label for="Usuario">Usuario </label>
             <input
-              type="codigo-producto"
+              type="username"
               class="controls"
               name=""
               placeholder="juaoss"
@@ -33,7 +33,7 @@ const MUsuariosModalActualizacion = () => {
 
             <label for="Rol Usuario">Rol del usuario </label>
             <input
-              type="codigo-producto"
+              type="text"
               class="controls"
               name=""
               placeholder="Vendedor"
@@ -43,7 +43,7 @@ const MUsuariosModalActualizacion = () => {
 
             <label for="Estado Usuario">Estado del usuario </label>
             <input
-              type="codigo-producto"
+              type="text"
               class="controls"
               name=""
               placeholder="Activo"
