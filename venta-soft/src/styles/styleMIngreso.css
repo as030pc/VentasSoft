@@ -1,0 +1,49 @@
+
+
+body{
+    /* background-image: url(/assets/img/fondo-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    background-color: #597eaa;
+    overflow-x: hidden;
+    
+}
+.form-login{
+    width: 35%;
+    height: auto;   
+    margin: auto; 
+    margin-top: 5%;
+    margin-bottom: 5%;          
+}
+.form-login h5{
+    color:black;
+    margin: 0;
+    text-align: center;
+    height: 30px;
+    margin-bottom: 50px ;
+    font-size: 30px;
+    
+}
+.form-login p{
+    color: white;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-2{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.btn-login{
+    margin: auto;
+    width: 45%;    
+}
+.btn-google{
+    width: 45%;
+    margin: auto;
+}
