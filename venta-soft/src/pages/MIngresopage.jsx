@@ -5,12 +5,12 @@ function MIngresopage() {
     return (
         <div>
             <div className="imagen">
-                <img src="" alt="" />
+                <img src="https://res.cloudinary.com/dgalifmjr/image/upload/v1633015665/ventasoft/VentaSoft_zxsphh.png" alt="" />
             </div>
             <section className="form-login">
                 <h5>VentaSoft</h5>
 
-                <form>
+                <form className="user_psw">
                     <div className="mb-3">
                         <label for="exampleInputEmail1" className="form-label">Correo electronico </label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -29,14 +29,13 @@ function MIngresopage() {
                     </div>
                 </form>
                 <p>¿Aún no estas registrado? </p>
-                <p>
-                    
+                                
                     <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         registrate aqui
                     </button>
 
                     
-                    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade modallogin" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog">
                             <div className="modal-content">
                                 <div className="modal-header">
@@ -71,7 +70,6 @@ function MIngresopage() {
                             </div>
                         </div>
                     </div>
-                </p>
             </section>
         </div>
     )
