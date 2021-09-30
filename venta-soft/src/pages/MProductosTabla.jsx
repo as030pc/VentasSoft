@@ -4,7 +4,7 @@ import "../styles/styleMProductos.css"
 
 const MProductosTabla = () => {
     return (
-        <div className = "div">
+        <div className = "container div">
             html
         </div>
     )
