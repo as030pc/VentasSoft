@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MVentasVentaNueva from './pages/MVentasVentaNueva';
-
-ReactDOM.render(
-<MVentasVentaNueva></MVentasVentaNueva>,
+import MVentasLista from './pages/MVentasLista';
+ReactDOM.render(<> <MVentasVentaNueva/><MVentasLista/> </>
+,
   document.getElementById('root')
 );
 
