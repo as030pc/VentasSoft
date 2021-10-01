@@ -2,15 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import MVentasVentaNueva from './pages/MVentasVentaNueva';
+
+import MVentasNueva from './pages/MVentasNueva';
 import MVentasLista from './pages/MVentasLista';
+import MVentasModificar from 'pages/MVentasModificar';
 
+
+
+ReactDOM.render(
+    
+  <React.StrictMode>,
   
+    <MVentasNueva/>
 
-
-  ReactDOM.render(
-    <React.StrictMode>,
-      <MVentasVentaNueva />
     </React.StrictMode>,
     document.getElementById('root')
 

@@ -1,16 +1,21 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import "../styles/styleMVentas.css"
 
 const MVentasLista = () => {
-    return (
+    return (    
         <div>
+            <h1>Interfaz Módulo Lista de ventas</h1>
             <main>
-                <div id="general_informe">
-                    <form>
-                    <div id="buscar_informe">
+
+            <form>
+                <div id="buscarLista">
                     <p>
-                    <input type ="search" name="buscarid" list="listaventa" placeholder="Buscar"/>
-                    <input type ="search" name="buscarventa" placeholder="Buscar"/>
-                    <input type ="submit" value="Buscar"/>
+                            
+                    <input type ="search" name="buscarid" list="listaventa" cplaceholder="Buscar"/>
+                    
+                    <input type="search" id="buscarVenta" placeholder="Buscar" />
+                    
+                    <input type="submit" value="Buscar" class="boton" />
                     </p>
 
                     <datalist id="listaventa">
@@ -37,71 +42,55 @@ const MVentasLista = () => {
                             <th>Actualizar</th>
                         </tr>
                         <tr>
-                            <td align="center">22/09/2021</td>
-                            <td align="center">001</td>
-                            <td align="center">43833733</td>
-                            <td align="center">22222222</td>
-                            <td align="center">Nombre cliente</td>
-                            <td align="center">P-0234</td>
-                            <td align="center">100000</td>
-                            <td align="center">1</td>
-                            <td align="center">100000</td>
-                            <td align="center">  <p>
-                                <input type="buscarestado" name="buscarestado" list="listaestados" placeholder="Estado venta"/>
+                            <td >22/09/2021</td>
+                            <td >001</td>
+                            <td >43833733</td>
+                            <td >22222222</td>
+                            <td >Nombre cliente</td>
+                            <td >P-0234</td>
+                            <td >100000</td>
+                            <td >1</td>
+                            <td >100000</td>
+                            <td >  <p>
+                                <input type="search" name="buscarestado" list="listaestados" placeholder="Estado venta"/>
                             </p></td>
-                            <td align="center"><input type="checkbox" id="cbox1" value="first_checkbox"/></td><br/>
+                            <td ><input type="checkbox" id="cbox1" value="first_checkbox"/></td><br/>
 
                         </tr>
-
                         <tr>
-                            <td align="center">22/09/2021</td>
-                            <td align="center">001</td>
-                            <td align="center">43833733</td>
-                            <td align="center">22222222</td>
-                            <td align="center">Nombre cliente</td>
-                            <td align="center">P-0234</td>
-                            <td align="center">100000</td>
-                            <td align="center">1</td>
-                            <td align="center">100000</td>
-                            <td align="center">  <p>
-                            <input type="buscarestado" name="buscarestado" list="listaestados" placeholder="Estado venta"/>
+                            <td >22/09/2021</td>
+                            <td >001</td>
+                            <td >43833733</td>
+                            <td >22222222</td>
+                            <td >Nombre cliente</td>
+                            <td >P-0234</td>
+                            <td >100000</td>
+                            <td >1</td>
+                            <td >100000</td>
+                            <td >  <p>
+                            <input type="search" name="buscarestado" list="listaestados" placeholder="Estado venta"/>
                             </p></td>
-                            <td align="center"><input type="checkbox" id="cbox2" value="first_checkbox"/></td><br/>
-
+                            <td ><input type="checkbox" id="cbox2" value="first_checkbox"/></td><br/>
                         </tr>
 
                         <tr>
-                            <td align="center">22/09/2021</td>
-                            <td align="center">001</td>
-                            <td align="center">43833733</td>
-                            <td align="center">22222222</td>
-                            <td align="center">Nombre cliente</td>
-                            <td align="center">P-0234</td>
-                            <td align="center">100000</td>
-                            <td align="center">1</td>
-                            <td align="center">100000</td>
-                            <td align="center">  <p>
-                                <input type="buscarestado" name="buscarestado" list="listaestados" placeholder="Estado venta"/>
-                            </p></td>
-                            <td align="center"><input type="checkbox" id="cbox3" value="first_checkbox"/></td><br/>
-
-                        </tr>
-
+                            <td >22/09/2021</td>
+                            <td >001</td>
+                            <td >43833733</td>
+                            <td >22222222</td>
+                            <td >Nombre cliente</td>
+                            <td >P-0234</td>
+                            <td >100000</td>
+                            <td >1</td>
+                            <td >100000</td>
+                                <td >  <p>
+                                    <input type="search" name="buscarestado" list="listaestados" placeholder="Estado venta" />
+                                </p></td>
+                            <td ><input type="checkbox" id="cbox3" value="first_checkbox"/></td><br/>
+                            </tr>
+                            
                         <tr>
-                            <td align="center">22/09/2021</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td align="center">22/09/2021</td>
+                            <td >22/09/2021</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -120,32 +109,29 @@ const MVentasLista = () => {
                         </datalist>
 
                     </table>
-                </div>
+            </div>
             </form>
 
-            <div id="totalfra"  >
-                <table id="totalfraventas" border="1">
+            <div id="totalFra"  >
+                <table id="totalFraVentas" border="1">
                     <tr>
-                        <td  align="center">Total ventas realizadas</td>
-                        <td  align="center">300000</td>
-                        <td  align="center">3</td>
-                        <td  align="center">300000</td>
+                        <td  >Total ventas realizadas</td>
+                        <td  >300000</td>
+
 
                     </tr>
 
                 </table>
-            </div>
+            
 
-            <div id="botonesVentas">
-                <button type="submit" >Imprimir</button>
-                <button type="submit">Descargar</button>
-                <button type="submit" >Modificar</button>
-                <button type="submit">Guardar cambios</button>
+            <div id="botonesListaVentas">
+                <button type="submit" class="boton">Imprimir</button>
+                <button type="submit" class="boton">Descargar</button>
+                <button type="submit" class="boton">Modificar</button>
+                <button type="submit" class="boton">Guardar cambios</button>
             </div>
-        </div>
+                </div>
     </main >
-
-
 
         </div >
     )
