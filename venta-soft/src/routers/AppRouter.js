@@ -8,6 +8,8 @@ import {
 
 } from "react-router-dom"
 import MIngresopage from '../pages/MIngresopage'
+import MUsuariosLista from '../pages/MUsuariosLista'
+import MUsuariosModalActualizacion from '../pages/MUsuariosModalActualizacion'
 
 const AppRouter = () => {
     return (
@@ -18,8 +20,11 @@ const AppRouter = () => {
                     <Route exact path = "/"  >
                         <MIngresopage/>
                     </Route>
-                    <Route exact path = "/registro"  >
-                        <MIngresopage/>
+                    <Route exact path = "/usuarioLista"  >
+                        <MUsuariosLista/>
+                    </Route>
+                    <Route exact path = "/usuarioModal"  >
+                        <MUsuariosModalActualizacion/>
                     </Route>
 
                 </Switch>

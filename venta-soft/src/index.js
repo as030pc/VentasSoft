@@ -9,5 +9,5 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <AppRouter />
-  </React.StrictMode>,
+  </React.StrictMode>, document.getElementById("root")
 );
