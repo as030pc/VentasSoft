@@ -5,10 +5,10 @@ function MIngresopage() {
     return (
         <div>
             <div className="imagen">
-                <img src="https://res.cloudinary.com/dgalifmjr/image/upload/v1633015665/ventasoft/VentaSoft_zxsphh.png" alt="" />
+                <img src="https://res.cloudinary.com/dgalifmjr/image/upload/v1633140157/ventasoft/VENTASOFT_LOGO_xptkya.png" alt="" />
             </div>
             <section className="form-login">
-                <h5>VentaSoft</h5>
+                <h5>Inicia sesión</h5>
 
                 <form className="user_psw">
                     <div className="mb-3">
