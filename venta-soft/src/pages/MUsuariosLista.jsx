@@ -13,7 +13,7 @@ const MUsuariosLista = () => {
 		
    	<section id="Tabla">
 
-     	<table className="table">
+     	<table className="centrar">
           
 						<thead>
 							<tr>
