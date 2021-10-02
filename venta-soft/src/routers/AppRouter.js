@@ -10,6 +10,7 @@ import {
 import MIngresopage from '../pages/MIngresopage'
 import MUsuariosLista from '../pages/MUsuariosLista'
 import MUsuariosModalActualizacion from '../pages/MUsuariosModalActualizacion'
+import MHome from '../pages/MHome'
 
 const AppRouter = () => {
     return (
@@ -25,6 +26,9 @@ const AppRouter = () => {
                     </Route>
                     <Route exact path = "/usuarioModal"  >
                         <MUsuariosModalActualizacion/>
+                    </Route>
+                    <Route exact path = "/home"  >
+                        <MHome/>
                     </Route>
 
                 </Switch>

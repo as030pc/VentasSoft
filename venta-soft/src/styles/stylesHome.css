@@ -1,0 +1,13 @@
+.Home {
+    background-color: rgba(66, 52, 145, 0.452);
+}
+
+.btn-salir {
+    align-content: flex-end;
+    margin-inline-end: auto;
+    background-color: rgba(219, 156, 21, 0.856);
+}
+
+.navegador {
+    margin-bottom: 3rem;
+}
