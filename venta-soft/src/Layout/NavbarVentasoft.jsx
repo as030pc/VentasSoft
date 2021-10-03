@@ -17,7 +17,7 @@ function NavbarVentasoft() {
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <Link class="nav-link active" aria-current="page" to="/">Home</Link>
-                        <Link class="nav-link" to="/">Ventas</Link>
+                        <Link class="nav-link" to="/ventas">Ventas</Link>
                         <Link class="nav-link" to="/producto">Productos</Link>
                         <Link class="nav-link" to="/usuarioLista">Usuarios</Link>
                         <Link class="nav-link" to="/login">Salir</Link>

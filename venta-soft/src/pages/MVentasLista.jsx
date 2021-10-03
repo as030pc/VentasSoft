@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import "../styles/stylesVentaNueva.css"
 
 const MVentasLista = () => {
@@ -112,7 +113,7 @@ const MVentasLista = () => {
                     <div id="botonesListaVentas">
                         <button type="submit" class="boton">Imprimir</button>
                         <button type="submit" class="boton">Descargar</button>
-                        <button type="submit" class="boton">Modificar</button>
+                        <button type="submit" class="boton"> <Link to = "/ventasModificar"> Modificar </Link></button>
                         <button type="submit" class="boton">Guardar cambios</button>
                     </div>
                 </div>

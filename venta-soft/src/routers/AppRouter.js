@@ -13,6 +13,8 @@ import MUsuariosModalActualizacion from '../pages/MUsuariosModalActualizacion'
 import MHome from '../pages/MHome'
 import MproductosCrear from '../pages/MproductosNuevoProducto'
 import MProductosTabla from '../pages/MProductosTabla'
+import MVentasLista from 'pages/MVentasLista'
+import MVentasModificar from 'pages/MVentasModificar'
 
 const AppRouter = () => {
     return (
@@ -38,6 +40,14 @@ const AppRouter = () => {
                     <Route exact path = "/crearProducto"  >
                         <MproductosCrear/>
                     </Route>
+                    <Route exact path = "/ventas"  >
+                        <MVentasLista/>
+                    </Route>
+                    <Route exact path = "/ventasModificar"  >
+                        <MVentasModificar/>
+                    </Route>
+
+                   
                     <Redirect to="/login" />
 
                 </Switch>

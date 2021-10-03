@@ -9,7 +9,7 @@ html {
 }
 
 h1{
-    color: indigo;
+    color:#000;
     text-align: center;
     margin-top: 30px;
 }
@@ -99,7 +99,7 @@ h1{
 
 
 .boton {
-    background-color: indigo;
+    background-color:blue;
     border: none;
     color: white;
     margin: 8px;
@@ -134,7 +134,7 @@ input[type="submit"] {
     flex: 15;
     border: none;
     width: 100px;
-    background:indigo;
+    background:blue;
     color: white;
     font-size: 14px;
     padding: 5px 10px;  
