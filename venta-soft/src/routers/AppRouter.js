@@ -11,6 +11,8 @@ import MIngresopage from '../pages/MIngresopage'
 import MUsuariosLista from '../pages/MUsuariosLista'
 import MUsuariosModalActualizacion from '../pages/MUsuariosModalActualizacion'
 import MHome from '../pages/MHome'
+import MproductosCrear from '../pages/MproductosNuevoProducto'
+import MProductosTabla from '../pages/MProductosTabla'
 
 const AppRouter = () => {
     return (
@@ -18,7 +20,7 @@ const AppRouter = () => {
             <Router>
                 
                 <Switch>
-                    <Route exact path = "/"  >
+                    <Route exact path = "/login"  >
                         <MIngresopage/>
                     </Route>
                     <Route exact path = "/usuarioLista"  >
@@ -27,9 +29,16 @@ const AppRouter = () => {
                     <Route exact path = "/usuarioModal"  >
                         <MUsuariosModalActualizacion/>
                     </Route>
-                    <Route exact path = "/home"  >
+                    <Route exact path = "/"  >
                         <MHome/>
                     </Route>
+                    <Route exact path = "/producto"  >
+                        <MProductosTabla/>
+                    </Route>
+                    <Route exact path = "/crearProducto"  >
+                        <MproductosCrear/>
+                    </Route>
+                    <Redirect to="/login" />
 
                 </Switch>
 

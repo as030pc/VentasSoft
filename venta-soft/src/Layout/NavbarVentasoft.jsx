@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 function NavbarVentasoft() {
 
@@ -15,11 +16,11 @@ function NavbarVentasoft() {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link" href="/">Ventas</a>
-                        <a class="nav-link" href="/">Productos</a>
-                        <a class="nav-link" href="/">Usuarios</a>
-                        <a class="nav-link" href="/">Salir</a>
+                        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                        <Link class="nav-link" to="/">Ventas</Link>
+                        <Link class="nav-link" to="/producto">Productos</Link>
+                        <Link class="nav-link" to="/usuarioLista">Usuarios</Link>
+                        <Link class="nav-link" to="/login">Salir</Link>
                     </div>
                 </div>
             </div>

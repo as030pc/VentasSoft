@@ -6,7 +6,7 @@ import '../styles/styleMUsuarios.css';
 const MUsuariosModalActualizacion = () => {
   return (
     <div>
-    <body>
+    
   
       <section id="Titulares" align="center">
         <h2 className="subtitulo">Actualización información de usuarios </h2>
@@ -60,7 +60,7 @@ const MUsuariosModalActualizacion = () => {
         <button type="submit" className="botonAzul">Guardar cambios</button>
       </section>
       
-    </body>
+   
     </div>
   );
  };

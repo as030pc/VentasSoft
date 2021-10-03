@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/styleMIngreso.css'
 
 function MIngresopage() {
@@ -24,7 +25,7 @@ function MIngresopage() {
                         <label className="form-check-label" for="exampleCheck1">Recuerdame</label>
                     </div>
                     <div className="btn-2">
-                        <button type="submit" className="btn btn-primary btn-login">login</button>
+                       <button type="submit" className="btn btn-primary btn-login"> <Link to = "/" style = {{textDecoration:null}}>Login </Link></button>
                         <button className="btn btn-primary btn-google" type="submit">Google</button>
                     </div>
                 </form>
