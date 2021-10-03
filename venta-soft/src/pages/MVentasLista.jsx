@@ -4,7 +4,7 @@ import "../styles/stylesVentaNueva.css"
 const MVentasLista = () => {
     return (
         <div>
-            <h1>Interfaz Módulo Lista de ventas</h1>
+            <h1>Estado de ventas</h1>
             <main>
             <div id="lista">
                 <form>

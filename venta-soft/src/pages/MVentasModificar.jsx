@@ -6,7 +6,7 @@ const MVentasModificar = () => {
         <div>
             <form>
                 <main>
-                    <h1>Interfaz Actualización Información de Ventas</h1>
+                    <h1>Actualización Información de Ventas</h1>
                     <br />
                     <section id="modificarVentas">
 

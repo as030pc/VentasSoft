@@ -5,7 +5,7 @@
 
 html {
     font-family:"Gill Sans MT";
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h1{
@@ -19,23 +19,54 @@ h1{
     padding:  1rem;   
     margin: auto;    
     width: 800px;
-
 }
 
 
-#datosfra,#producto,#clientes, #vendedor{
+
+#datosfra{
+    border: 1px solid #cecaca;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    margin: 5px;
+    width: 95%; 
+
+}
+#producto{
     border: 1px solid #cecaca;
     display: inline-block;
     padding: 10px;
     margin: 5px;
-    width: 45%; 
+    width: 95%;   
 }
 
-#total, #botones {
+#producto #codigo{
     border: 1px solid #cecaca;
     padding: 10px;
     margin: 5px;
-    width: 92%; 
+    width: 95%; 
+
+}
+#producto #cantidadPrecio{
+     
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#clientes, #vendedor, #infoFecha, #idFactura{
+    border: 1px solid #cecaca;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    width: 47%; 
+}
+
+#total, #botones{
+    border: 1px solid #cecaca;
+    padding: 10px;
+    margin: 5px;
+    width: 95%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,6 +86,7 @@ h1{
 
 .controls {
     border: 1px solid #cecaca;
+
     width: 300px;
     height: 30px;
     font-weight: 200;
@@ -65,15 +97,16 @@ h1{
      
 }
 
+
 .boton {
     background-color: indigo;
     border: none;
     color: white;
     margin: 8px;
-    padding: 8px 8px;
+    padding: 10px 15px;
     margin-top: 10px;
     cursor: pointer;
-    width: 150px;
+    width: 200px;
     font: bold;
     border-radius: 5px;
     
@@ -169,54 +202,4 @@ td { background: #FAFAFA; text-align: center;
     display: block;
     font-size: 18px;
     font-weight: 600;
- 
-
 }
-
-
-
-/*
-form {
-    width: 80%;
-    max-width: 600px;
-    padding: 30px;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-#buscarLista{
-    display: flex;
-    flex-direction:column;
-    width: 1000px;   
-}
-
-#buscarLista #buscarVenta{
-    width: 300px;
-}
-
-
-#totalFra{
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-}
-
-
-#totalFra #botonesListaVentas{
-  padding: 0 1rem;
-  margin: 2rem;
-}
-
-input{
-    border: transparent;
-}
-
-#actualizarVentas{
- width: 300px;
-}*/
