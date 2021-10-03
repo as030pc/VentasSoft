@@ -12,6 +12,22 @@ const MProductosTabla = () => {
           <section id="Titulares">
             <h2 align="center" className="subtitulo">Listado de productos</h2>
           </section>
+
+          <div id="buscarLista">
+                        <p>
+
+                            <input type="search" id="buscarid" list="listaventa" placeholder="Buscar por ..." />
+
+                            <input type="search" id="buscarVenta" placeholder="Buscar" />
+
+                            <input type="submit" value="Buscar" class="boton" />
+                        </p>
+
+                        <datalist id="listaventa">
+                            <option value="Identificador de producto"></option>
+                            <option value="Descripcion de producto"></option>
+                        </datalist>
+                    </div>
     
            
           <section id="Tabla">
@@ -90,13 +106,7 @@ const MProductosTabla = () => {
                    </table>
           </section>
     
-          <section id="botonesVentas" align="center">
-            <button type="submit" className="botonAzul">Imprimir</button>
-            <button type="submit" className="botonAzul">Descargar</button>
-            <button type="submit" className="botonAzul"> <Link to = "crearProducto">  Modificar </Link> </button>
-            <button type="submit" className="botonAzul"> Guardar cambios </button>
-        
-          </section>
+         
         </body>
       </div>
     )

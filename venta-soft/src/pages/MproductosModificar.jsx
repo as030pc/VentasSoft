@@ -6,7 +6,7 @@ const MproductosCrear = () => {
     return (
         <div  id="FormularioActualizacionDatos" align="center" >
             <form >
-                <h1> Creacion de nuevo producto </h1>
+                <h1> Actualización Información de Productos </h1>
                 <div className="form-group">
                     
                     <div className="form-group col-md-4">
@@ -55,7 +55,7 @@ const MproductosCrear = () => {
                     
                     <div id="botonesVentas" align="center">
                         <button className="btn btn-primary"
-                            type="submit"> <Link to = "/producto">  Registrar producto </Link> </button>
+                            type="submit"> <Link to = "/producto">  Modificar </Link> </button>
                     </div>
 
                    
