@@ -13,7 +13,7 @@ ReactDOM.render(
     
   <React.StrictMode>,
   
-    <MVentasNueva/>
+    <MVentasModificar/>
 
     </React.StrictMode>,
     document.getElementById('root')

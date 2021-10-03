@@ -1,168 +1,74 @@
-import React, { useEffect, useState } from 'react'
-import "../styles/styleMVentas.css"
+import React from 'react'
+import "../styles/stylesVentaNueva.css"
 
 const MVentasNueva = () => {
-
-    const [codigoVenta, setCodigoVenta] = useState('');
-
-    useEffect(() => {
-        console.log("Hola soy useEEfect que se ejecuta solo una vez");
-    },
-        []);
-
-
-    const guardarDatos = () => {
-        console.log('El valor de la variable Código venta es ', codigoVenta);
-    }
-
-
-    const cambioCodigo = (e) => {
-        console.log("Codigo: ", e.target.value);
-    }
-
     return (
-        <div>
+    <div>
 
-            <h1 aling="center">Interfaz Módulo Venta Nueva</h1>
-            <main>
-                <form>
-                    <div id="buscarVentas">
-
-                        <p>
-                            <input type="search" name="busquedaventa" list="listaventa" />
-                            
-                            <input type="search" id="buscar" placeholder="Buscar" />
-                            
-                            <input type="submit" value="Buscar" class="boton" />
-                        </p>
+    
+    <div>
+        <h1 aling="center">Interfaz Módulo Venta Nueva</h1>
+    </div>
 
 
-                        <datalist id="listaventa">
-                            <option value="Identificador venta"></option>
-                            <option value="Documento identidad cliente"></option>
-                            <option value="Nombre cliente"></option>
-                        </datalist>
+    <div id="ventasGeneral" class="general">
 
-                    </div>
-                    <div id="ventasGeneral">
+        <form>
 
-                        <div id="producto"><br />
-                            <div id="codProducto">
-                                <label for="codigo-producto" >Código producto</label>
-                                <input onChange={(e) => {
-                                    console.log("Codigo: ", e.target.value)
-                                }} type="codigo-producto" name="" placeholder="Código producto" />
+            <div id="datosfra"><br/>
+                <label for="idfactura" >Factura</label><br/>
+                <input class="id" id="idfactura" name="idfactura" type="number" placeholder="#####"/><br/>
 
+                <label for="fecha" >Fecha</label><br/>
+                <input class="id" id="fecha"  type="date" placeholder="Ej: dd/mm/aaaa"/><br/>
+            </div>
+            
 
-                                <label for="cantidad">Cantidad</label>
-                                <input type="n" class="controls" name="" placeholder="Ej: Cantidad" />
+            <div id="producto" ><br/>
 
-                            </div>
-                            <label for="nombre-producto" >Nombre producto</label>
-                            <input type="nombre-producto" class="controls" name="" placeholder="Nombre producto" />
+                <label for="codigo-producto">Código producto</label><br/>
+                <input class="id" placeholder="Código" type="text"/><br/>
 
-                            <label for="precio">Precio unitario</label>
-                            <input type="number" class="controls" name="" placeholder="Precio unitario" />
+                <label for="cantidad">Cantidad</label><br/>
+                <input class="id" name type="number" placeholder="Cantidad"/>
 
-                            <label for="precio">Subtotal</label>
-                            <input type="number" class="controls" name="" placeholder="Subtotal" />
-
-                            <button type="button" class="boton" aling="center"> Agregar</button><br />
-                        </div>
+            </div>
 
 
-                        <div id="clientes"><br />
-                            <label for="idCliente" >Identificación cliente</label>
-                            <input onChange={(e) => {
-                                console.log("Codigo: ", e.target.value)
-                            }} type="codigo-producto" class="controls" name="" placeholder="Identificación cliente" />
+            <div id="clientes"><br/>
+                <label for="idCliente">Identificación cliente</label><br/>
+                <input type="number" class="id" name="" placeholder="Identificación cliente" /><br/>
+
+                <label for="nombreCliente">Nombre cliente</label><br/>
+                <input class="controls" name type="text" placeholder="Nombre cliente"/>
+            
+            </div>
 
 
-                            <label for="nombreCliente">Nombre cliente</label>
-                            <input type="nombreCliente" class="controls" name="" placeholder="Nombre cliente" />
+            <div id="vendedor"><br/>
+                <label for="vendedor">Identificación vendedor</label><br/>
+                <input type="number" class="id" name="" placeholder="Identificación vendedor" /><br/>
+                
+                <label for="nombreVendedor">Nombre vendedor</label><br/>
+                <input class="controls" name type="text" placeholder="Nombre vendedor"/>
+            </div>
 
-                            <label for="Dirección" >Dirección</label>
-                            <input type="Dirección" class="controls" name="" placeholder="Dirección" />
+            <div id="total">
+                <label for="Total">Total a pagar</label><br/>
+                <input class="controls" type="number" placeholder="Total a pagar"/>
+            </div>
 
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" class="controls" name="" placeholder="Teléfono" />
-                        </div>
+            <div id="botones"><br/>
+                <button class="boton" type="submit">Registrar venta</button>
+                        <button class="boton" type="submit">Modificar</button>
+                        <button class="boton" type="submit">Listas</button>
+            </div>
 
-                    </div>
-                    <div id="tablaVentas" ><br />
-                        <table id="registroVentas" border="1" aling="center">
+        </form>
+    </div>
 
-
-                            <tr>
-                                <th colSpan="2">Productos agregados</th>
-
-                            </tr>
-                            <br />
-
-                            <tr>
-                                <th>Código artículo</th>
-                                <th>Artículo</th>
-                                <th>Precio unitario</th>
-                                <th>Cantidad</th>
-                                <th>Cambios</th>
-                            </tr>
-                            <tr>
-                                <td >P-0234</td>
-                                <td > Pantalón</td>
-                                <td >100000</td>
-                                <td >1</td>
-                                <td ><input type="checkbox" id="cbox1" /></td>
-                            </tr>
-                            <tr>
-                                <td >C-0123</td>
-                                <td >Camisa</td>
-                                <td >100000</td>
-                                <td >1</td>
-                                <td ><input type="checkbox" id="cbox1" value="first_checkbox" /></td><br />
-                            </tr>
-                            <tr>
-                                <td >C-0123</td>
-                                <td >Camisa</td>
-                                <td >100000</td>
-                                <td >1</td>
-                                <td ><input type="checkbox" id="cbox1" value="first_checkbox" /></td><br />
-                            </tr>
-                            <tr>
-                                <td >C-0123</td>
-                                <td >Camisa</td>
-                                <td >100000</td>
-                                <td >1</td>
-                                <td ><input type="checkbox" id="cbox1" value="first_checkbox" /></td><br />
-                            </tr>
-                        </table>
-
-                    </div>
-
-                    <div id="vendedor">
-                        <p>
-                            <label for="nombreVendedor">Vendedor</label><br/>
-                            <input type="search" id="nombreVendedor"  class="controls" list="listavendedor"  />
-
-                            <label for="Total">Total a pagar</label>
-                            <input type="number" name="total" class="controls" />
-
-                        </p>
-                        <datalist id="listavendedor">
-                            <option value="Id vendedor1 - Nombre vendedor"></option>
-                            <option value="Id vendedor2 - Nombre vendedor"></option>
-                            <option value="Id vendedor3 - Nombre vendedor"></option>
-                        </datalist>
-                    </div>
-                    <div id="botones">
-                        <button type="submit" class="boton">Registrar venta</button>
-                        <button type="submit" class="boton">Modificar</button>
-                    </div>
-
-                </form>
-            </main>
-        </div>
-
+</div>
     )
 };
-export default MVentasNueva
 
+export default MVentasNueva

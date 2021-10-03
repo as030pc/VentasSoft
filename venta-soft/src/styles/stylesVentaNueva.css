@@ -1,0 +1,222 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+html {
+    font-family:"Gill Sans MT";
+    font-size: 16px;
+}
+
+h1{
+    color: indigo;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#ventasGeneral{
+    justify-content: center;
+    padding:  1rem;   
+    margin: auto;    
+    width: 800px;
+
+}
+
+
+#datosfra,#producto,#clientes, #vendedor{
+    border: 1px solid #cecaca;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    width: 45%; 
+}
+
+#total, #botones {
+    border: 1px solid #cecaca;
+    padding: 10px;
+    margin: 5px;
+    width: 92%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+
+.id{
+    border: 1px solid #cecaca;
+    width: 200px;    
+    font-weight: 200;
+    padding: 3px 3px;
+    font: bold;
+    border-radius: 5px;    
+    margin: 8px;
+}
+
+.controls {
+    border: 1px solid #cecaca;
+    width: 300px;
+    height: 30px;
+    font-weight: 200;
+    padding: 3px px;
+    font: bold;
+    border-radius: 5px;
+    margin:8px;
+     
+}
+
+.boton {
+    background-color: indigo;
+    border: none;
+    color: white;
+    margin: 8px;
+    padding: 8px 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 150px;
+    font: bold;
+    border-radius: 5px;
+    
+}
+
+form {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ 
+label{
+    font-size: 20px;
+}
+
+
+input[type="search"] {
+    flex: 15;
+    font-size: 15px;
+    padding: 3px 6px;  
+    border-radius: 5px;
+}
+
+
+input[type="submit"] {
+    flex: 15;
+    border: none;
+    width: 100px;
+    background:indigo;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;  
+    cursor: pointer;
+    margin-bottom: 10;
+}
+
+
+th, td, tr{
+    width: 35%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+ 
+}
+   
+
+table {  color: #333; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; width: 1200px; border-collapse: collapse;}
+
+td, th { border: 1px black transparent; height: 30px; width: 200px; text-align: center;}  
+
+th { background: #D3D3D3; font-weight: bold; }
+
+td { background: #FAFAFA; text-align: center; 
+}
+
+
+#lista #buscarVenta{
+    width: 500px;
+    background-color:rgb(203, 234, 247);
+}
+
+
+#lista{   
+    justify-content: center;
+    padding:  1rem;   
+    margin: auto;    
+    width: 1230px;
+}
+
+#botonesListaVentas{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#modificarVentas {
+    width: 500px;
+    max-width: 600px;
+    margin: 8px;
+    padding: 8px 8px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #cecaca;   
+
+}
+
+.label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+ 
+
+}
+
+
+
+/*
+form {
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#buscarLista{
+    display: flex;
+    flex-direction:column;
+    width: 1000px;   
+}
+
+#buscarLista #buscarVenta{
+    width: 300px;
+}
+
+
+#totalFra{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+
+#totalFra #botonesListaVentas{
+  padding: 0 1rem;
+  margin: 2rem;
+}
+
+input{
+    border: transparent;
+}
+
+#actualizarVentas{
+ width: 300px;
+}*/
