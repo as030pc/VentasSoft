@@ -15,6 +15,7 @@ import MproductosCrear from '../pages/MproductosNuevoProducto'
 import MProductosTabla from '../pages/MProductosTabla'
 import MVentasLista from 'pages/MVentasLista'
 import MVentasModificar from 'pages/MVentasModificar'
+import MVentasNueva from 'pages/MVentasNueva'
 
 const AppRouter = () => {
     return (
@@ -22,7 +23,7 @@ const AppRouter = () => {
             <Router>
                 
                 <Switch>
-                    <Route exact path = "/login"  >
+                    <Route exact path = "/"  >
                         <MIngresopage/>
                     </Route>
                     <Route exact path = "/usuarioLista"  >
@@ -31,7 +32,7 @@ const AppRouter = () => {
                     <Route exact path = "/usuarioModal"  >
                         <MUsuariosModalActualizacion/>
                     </Route>
-                    <Route exact path = "/"  >
+                    <Route exact path = "/home"  >
                         <MHome/>
                     </Route>
                     <Route exact path = "/producto"  >
@@ -46,9 +47,11 @@ const AppRouter = () => {
                     <Route exact path = "/ventasModificar"  >
                         <MVentasModificar/>
                     </Route>
-
+                    <Route exact path = "/ventasNueva"  >
+                        <MVentasNueva/>
+                    </Route>
                    
-                    <Redirect to="/login" />
+                    <Redirect to="/" />
 
                 </Switch>
 
