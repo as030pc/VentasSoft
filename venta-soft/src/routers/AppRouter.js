@@ -25,7 +25,7 @@ const AppRouter = () => {
     return (
         <div>
             <Router>
-            <NavbarVentasoft/>
+            
                 <Switch>
                     <Route exact path = "/"  >
                         <MIngresopage/>
@@ -62,7 +62,7 @@ const AppRouter = () => {
                     <Redirect to="/" />
 
                 </Switch>
-            <Footer/>
+          
 
             </Router>
         
