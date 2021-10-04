@@ -7,7 +7,7 @@ const MVentasNueva = () => {
 
 
             <div>
-                <h1 aling="center">Regito de Ventas Nuevas</h1>
+                <h1 aling="center">Registro de Ventas Nuevas</h1>
             </div>
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import NavbarVentasoft from '../Layout/NavbarVentasoft'
 import footer from '../Layout/footerBar'
+import Footer from 'Layout/footerBar'
 
 const MHome = () => {
     return (
@@ -62,6 +63,8 @@ const MHome = () => {
                     </div>
                 </div>
             </div>
+        <Footer/>
+      
         </div>
     )
 }

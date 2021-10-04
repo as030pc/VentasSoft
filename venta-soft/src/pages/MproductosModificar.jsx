@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/styleMUsuarios.css';
 
-const MproductosCrear = () => {
+const MproductosModificar = () => {
     return (
         <div  id="FormularioActualizacionDatos" align="center" >
             <form >
@@ -69,4 +69,4 @@ const MproductosCrear = () => {
     )
 }
 
-export default MproductosCrear
+export default MproductosModificar
