@@ -20,24 +20,22 @@ body{
     border-radius: 5px;
 
 }
-.form-login{
+.form-sesion{
     width: 35%;
     height: auto;   
     margin: auto;
-    margin-top: 4%; 
+    margin-top: 4%;
+    text-align: center;
     
 }
 .user_psw{
     text-align: left;
 }
-.form-login h5{
+.titulo{
     color:black;
-    margin: 0;
     text-align: center;
-    height: 30px;
-    margin-bottom: 50px ;
-    font-size: 30px;
-    
+    height: 50px;
+    margin-bottom: 10px ;    
 }
 .form-login p{
     color:black;

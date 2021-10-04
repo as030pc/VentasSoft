@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import NavbarVentasoft from '../Layout/NavbarVentasoft'
 import footer from '../Layout/footerBar'
 import Footer from 'Layout/footerBar'
@@ -17,7 +18,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">REGISTRO DE LAS VENTAS</h5>
                             <p className ="card-text">Para ingresar una nueva venta pulse en IR.</p>
-                            <a href="dirige al modal de registro de ventas" className ="btn btn-primary">IR</a>
+                            <Link to="/ventasNueva" href="dirige al modal de registro de ventas" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>
@@ -27,7 +28,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">ESTADO DE lAS VENTAS</h5>
                             <p className ="card-text">Consulta el estado de las ventas dando clic en IR.</p>
-                            <a href="dirige al modal de estado de ventas" className ="btn btn-primary">IR</a>
+                            <Link to="/ventas" href="dirige al modal de estado de ventas" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>
@@ -37,7 +38,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">REGISTRO DE PRODUCTO</h5>
                             <p className ="card-text">Consulta el inventario dando clic en IR.</p>
-                            <a href="dirige al modal de registro de producto" className ="btn btn-primary">IR</a>
+                            <Link to="/producto" href="dirige al modal de registro de producto" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>
@@ -47,7 +48,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">ESTADO DE PRODUCTO</h5>
                             <p className ="card-text">Para ingresar un producto pulse en IR.</p>
-                            <a href="dirige al modal de estado de producto" className ="btn btn-primary">IR</a>
+                            <Link to="crearProducto" href="dirige al modal de estado de producto" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>
@@ -57,7 +58,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">GESTIÓN DE USUARIOS</h5>
                             <p className ="card-text">COnlsulta y actualiza dando clic en IR.</p>
-                            <a href="dirige al modal de gestion de usuarios" className ="btn btn-primary">IR</a>
+                            <Link to="/usuarioModal" href="dirige al modal de gestion de usuarios" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../styles/styleMUsuarios.css';
-
+import NavbarVentasoft from 'Layout/NavbarVentasoft';
 
 
 const MProductosTabla = () => {
     return (
         <div>
+        <NavbarVentasoft/>
         <body className="body">
    
           <section id="Titulares">

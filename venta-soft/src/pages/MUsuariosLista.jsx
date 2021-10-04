@@ -1,9 +1,11 @@
 import React from 'react';
 import '../styles/styleMUsuarios.css';
+import NavbarVentasoft from 'Layout/NavbarVentasoft';
 
 const MUsuariosLista = () => {
  return (
    <div>
+	<NavbarVentasoft/>
  	<body className="body">
 
    	<section id="Titulares">
