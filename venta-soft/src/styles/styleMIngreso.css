@@ -1,0 +1,67 @@
+body{
+    /* background-image: url(/assets/img/fondo-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    background-color:aliceblue;
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.imagen{
+    text-align: left;
+    width: 40%;
+}  
+.imagen img{
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+.form-login{
+    width: 35%;
+    height: auto;   
+    margin: auto;
+    margin-top: 4%; 
+    
+}
+.user_psw{
+    text-align: left;
+}
+.form-login h5{
+    color:black;
+    margin: 0;
+    text-align: center;
+    height: 30px;
+    margin-bottom: 50px ;
+    font-size: 30px;
+    
+}
+.form-login p{
+    color:black;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-2{
+    display: flex;
+    flex-direction: row;
+}
+.modallogin{
+    text-align: left;
+}
+
+.btn-login{
+    margin: auto;
+    width: 48%;
+    font-size: 90%;
+}
+.btn-google{
+    width: 48%;
+    margin: auto;
+    font-size: 90%;
+}
