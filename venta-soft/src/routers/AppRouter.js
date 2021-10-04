@@ -20,13 +20,14 @@ import Footer from 'Layout/footerBar'
 import MVentasNueva from 'pages/MVentasNueva'
 import MproductosModificar from 'pages/MproductosModificar'
 
+
 const AppRouter = () => {
     return (
         <div>
             <Router>
-            <NavbarVentasoft/>
+            
                 <Switch>
-                    <Route exact path = "/login"  >
+                    <Route exact path = "/"  >
                         <MIngresopage/>
                     </Route>
                     <Route exact path = "/usuarioLista"  >
@@ -35,7 +36,7 @@ const AppRouter = () => {
                     <Route exact path = "/usuarioModal"  >
                         <MUsuariosModalActualizacion/>
                     </Route>
-                    <Route exact path = "/"  >
+                    <Route exact path = "/home"  >
                         <MHome/>
                     </Route>
                     <Route exact path = "/producto"  >
@@ -54,11 +55,14 @@ const AppRouter = () => {
                         <MproductosModificar/>
                     </Route>
 
+                    <Route exact path = "/ventasNueva"  >
+                        <MVentasNueva/>
+                    </Route>
                    
-                    <Redirect to="/login" />
+                    <Redirect to="/" />
 
                 </Switch>
-            <Footer/>
+          
 
             </Router>
         

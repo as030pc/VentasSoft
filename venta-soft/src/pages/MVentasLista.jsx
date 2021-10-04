@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "../styles/stylesVentaNueva.css"
+import NavbarVentasoft from 'Layout/NavbarVentasoft'
 
 const MVentasLista = () => {
     return (
         <div>
+            <NavbarVentasoft/>
             <h1>Estado de ventas</h1>
             <main>
             <div id="lista">
@@ -119,7 +121,6 @@ const MVentasLista = () => {
                 </div>
             </div>
             </main >
-
         </div >
     )
 }

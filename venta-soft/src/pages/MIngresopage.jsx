@@ -8,8 +8,10 @@ function MIngresopage() {
             <div className="imagen">
                 <img src="https://res.cloudinary.com/dgalifmjr/image/upload/v1633140157/ventasoft/VENTASOFT_LOGO_xptkya.png" alt="" />
             </div>
-            <section className="form-login">
-                <h5>Inicia sesión</h5>
+            <section className="form-sesion">
+                <div className="titulo">
+                    <h5>Inicia sesión</h5>
+                </div>
 
                 <form className="user_psw">
                     <div className="mb-3">
@@ -25,13 +27,13 @@ function MIngresopage() {
                         <label className="form-check-label" for="exampleCheck1">Recuerdame</label>
                     </div>
                     <div className="btn-2">
-                       <button type="submit" className="btn btn-primary btn-login"> <Link to = "/" style = {{textDecoration:null}}>Login </Link></button>
-                        <button className="btn btn-primary btn-google" type="submit">Google</button>
+                       <button type="submit" className="btn btn-primary btn-login"> Login </button>
+                        <Link to="/home" className="btn btn-primary btn-google" type="submit">google</Link>
                     </div>
                 </form>
                 <p>¿Aún no estas registrado? </p>
                                 
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-primary btn-registro" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         registrate aqui
                     </button>
 
