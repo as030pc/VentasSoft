@@ -1,13 +1,25 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/styleMUsuarios.css';
 
 const MproductosModificar = () => {
+
+    
     return (
-        <div  id="FormularioActualizacionDatos" align="center" >
+
+      
+       
+       
+       <div  id="FormularioActualizacionDatos" align="center" >
+            
+           
+            
             <form >
                 <h1> Actualización Información de Productos </h1>
                 <div className="form-group">
+
+                 
                     
                     <div className="form-group col-md-4">
                         <label htmlFor="nombre">Nombre de producto </label>

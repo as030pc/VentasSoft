@@ -1,116 +1,128 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import '../styles/styleMUsuarios.css';
 import NavbarVentasoft from 'Layout/NavbarVentasoft';
+import axios from 'axios';
+
 
 
 const MProductosTabla = () => {
-    return (
-        <div>
-        <NavbarVentasoft/>
-        <body className="body">
-   
-          <section id="Titulares">
-            <h2 align="center" className="subtitulo">Listado de productos</h2>
-          </section>
 
-          <div id="buscarLista">
-                        <p>
 
-                            <input type="search" id="buscarid" list="listaventa" placeholder="Buscar por ..." />
 
-                            <input type="search" id="buscarVenta" placeholder="Buscar" />
+        const [productos, setProductos] = useState([])
 
-                            <input type="submit" value="Buscar" class="boton" />
-                        </p>
+        useEffect(() => {
+                obtenerEmpleados()
 
-                        <datalist id="listaventa">
-                            <option value="Identificador de producto"></option>
-                            <option value="Descripcion de producto"></option>
-                        </datalist>
-                    </div>
-    
-           
-          <section id="Tabla">
-   
-            <table className="centrar">
-             
-                           <thead>
-                               <tr>
-                                       <th className="th">ID del producto </th>
-                                       <th className="th"> Nombre del producto  </th>
-                                       <th className="th">Descripcion  </th>
-                                       <th className="th"> Cantidad </th>
-                                       <th className="th"> Precio Unitario </th>
-                                       <th className="th"> Acciones</th>
-                               </tr>
-                        </thead>
-   
-                        <tbody>
-              
-                               <tr id="fila1">
-                                       <td id="celda1-0" className="td">
-                                       XXXX
-                                       </td>
-                                       <td id="celda-1" className="td">
-                                       Producto X
-                                       </td>
-                                       <td id="celda1-2" className="td">
-                                       XXXX XXXX
-                                       </td>
-                                       <td id="celda1-3" className="td">
-                                       X
-                                       </td>
-                                       <td id="celda1-4" className="td">
-                                       X
-                                       </td>
-                                       <td id="celda1-5" className="td">
-                                       <button type="submit" className="botonTabla">Click para actualizar</button>
+        }, [])
+        const obtenerEmpleados = async () => {
+                const id = sessionStorage.getItem('idUsuario')
+                const token = sessionStorage.getItem('token')
+                const respuesta = await axios.get("url/ " + id, {
+                        headers: { 'autorizacion': token }
+                })
+                setProductos(respuesta.data)
 
-                                       </td>
-                               </tr>
-       
-                               <tr id="fila2">
-                                       <td id="celda2-0" className="td"></td>
-                                       <td id="celda2-1" className="td"></td>
-                                       <td id="celda2-2" className="td"></td>
-                                       <td id="celda2-3" className="td"></td>
-                                       <td id="celda2-4" className="td"></td>
-                                       <td id="celda2-5" className="td">
-                                       <button type="submit" className="botonTabla">Click para actualizar</button>
-                                       </td>
-                               </tr>
-       
-                               <tr id="fila3">
-                                       <td id="celda3-0" className="td"></td>
-                                       <td id="celda3-1" className="td"></td>
-                                       <td id="celda3-2" className="td"></td>
-                                       <td id="celda3-3" className="td"></td>
-                                       <td id="celda3-4" className="td"></td>
-                                       <td id="celda3-5" className="td">
-                                       <button type="submit" className="botonTabla">Click para actualizar</button>
-                                       </td>
-                               </tr>
-       
-                               <tr id="fila4">
-                                       <td id="celda4-0" className="td"></td>
-                                       <td id="celda4-1" className="td"></td>
-                                       <td id="celda4-2" className="td"></td>
-                                       <td id="celda4-3" className="td"></td>
-                                       <td id="celda4-4" className="td"></td>
-                                       <td id="celda4-5" className="td">
-                                       <button type="submit" className="botonTabla">Click para actualizar</button>
-                                       </td>
-                               </tr>
-                           </tbody>
-                    
-                   </table>
-          </section>
-    
-         
-        </body>
-      </div>
-    )
+        }
+        return (
+                <div>
+                        <NavbarVentasoft />
+                        <body className="body">
+
+                                <section id="Titulares">
+                                        <h2 align="center" className="subtitulo"> Gestion de productos </h2>
+                                </section>
+
+                                <nav className="nav py-4">
+                                        <div className="container">
+                                                <div className="col-md-3">
+                                                        <Link to="/" className="btn btn-primary btn-block" data-toggle="modal" data-target="#addProducto"> Añadir empleado</Link>
+                                                </div>
+                                                <div className="col-md-6 ml-auto" >
+                                                        <div className="input-group">
+                                                                <datalist id="listaventa">
+                                                                        <option value="Identificador de producto"></option>
+                                                                        <option value="Descripcion de producto"></option>
+                                                                </datalist>
+                                                                <input className="form-control" type="search" placeholder="buscar" />
+                                                        </div>
+                                                </div>
+
+                                        </div>
+                                </nav>
+
+                                <section id="Tabla">
+                                        <table className="centrar">
+                                                <thead>
+                                                        <tr>
+                                                                <th className="th">ID del producto </th>
+                                                                <th className="th"> Nombre del producto  </th>
+                                                                <th className="th">Descripcion  </th>
+                                                                <th className="th"> Cantidad </th>
+                                                                <th className="th"> Precio Unitario </th>
+                                                                <th className="th"> Acciones</th>
+                                                        </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                        {
+                                                                productos.map((producto, id) => {
+                                                                        <tr key={producto.id}>
+                                                                        <td id="celda1-0" className="td">
+                                                                                {producto.id}
+                                                                        </td>
+                                                                        <td id="celda-1" className="td">
+                                                                                {producto.nombre}
+                                                                        </td>
+                                                                        <td id="celda1-2" className="td">
+                                                                                {producto.descripcion}
+                                                                        </td>
+                                                                        <td id="celda1-3" className="td">
+                                                                                {producto.cantidad}
+                                                                        </td>
+                                                                        <td id="celda1-4" className="td">
+                                                                                {producto.precio}
+                                                                        </td>
+                                                                        <td id="celda1-5" className="td">
+                                                                                <button type="submit" className="botonTabla"> Actualizar </button>
+
+                                                                        </td>
+                                                                </tr>
+                                                                })
+
+                                                        }
+
+
+
+                                                </tbody>
+
+                                        </table>
+                                </section>
+
+
+                        </body>
+
+
+                        {/* modal */}
+                        <div className="modal fade" id="addProducto">
+                                <div className="modal-dialog">
+                                        <div className="modal-content">
+                                                <div className="modal-header">
+                                                        <h5 className="modal-title">
+                                                                Añadir producto
+                                                        </h5>
+                                                        <button className="close">
+
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                </div>
+
+        )
 }
 
 export default MProductosTabla
