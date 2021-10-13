@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import NavbarVentasoft from '../Layout/NavbarVentasoft'
-import footer from '../Layout/footerBar'
 import Footer from 'Layout/footerBar'
 
 const MHome = () => {

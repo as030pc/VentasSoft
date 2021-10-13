@@ -11,12 +11,10 @@ import MIngresopage from '../pages/MIngresopage'
 import MUsuariosLista from '../pages/MUsuariosLista'
 import MUsuariosModalActualizacion from '../pages/MUsuariosModalActualizacion'
 import MHome from '../pages/MHome'
-import MproductosCrear from '../pages/MproductosNuevoProducto'
+
 import MProductosTabla from '../pages/MProductosTabla'
 import MVentasLista from 'pages/MVentasLista'
 import MVentasModificar from 'pages/MVentasModificar'
-import NavbarVentasoft from 'Layout/NavbarVentasoft'
-import Footer from 'Layout/footerBar'
 import MVentasNueva from 'pages/MVentasNueva'
 import MproductosModificar from 'pages/MproductosModificar'
 
@@ -42,9 +40,7 @@ const AppRouter = () => {
                     <Route exact path = "/producto"  >
                         <MProductosTabla/>
                     </Route>
-                    <Route exact path = "/crearProducto"  >
-                        <MproductosCrear/>
-                    </Route>
+                    
                     <Route exact path = "/ventas"  >
                         <MVentasLista/>
                     </Route>

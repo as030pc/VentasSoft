@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../styles/styleMUsuarios.css';
 import NavbarVentasoft from 'Layout/NavbarVentasoft';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+
 
 
 
@@ -11,64 +13,116 @@ const MProductosTabla = () => {
 
 
         const [productos, setProductos] = useState([])
+        const [nombre, setNombre] = useState("")
+        const [descripcion, setDescripcion] = useState("")
+        const [cantidad, setCantidad] = useState("")
+        const [precio, setPrecio] = useState("")
+
+
 
         useEffect(() => {
-                obtenerEmpleados()
+                obtenerProductos()
 
         }, [])
-        const obtenerEmpleados = async () => {
+        const obtenerProductos = async () => {
                 const id = sessionStorage.getItem('idUsuario')
                 const token = sessionStorage.getItem('token')
-                const respuesta = await axios.get("url/ " + id, {
+                const respuesta = await axios.get("http//localhost:4000/productos/listaproductos/" + id, {
                         headers: { 'autorizacion': token }
                 })
                 setProductos(respuesta.data)
 
         }
+
+        const guardar = async (e) => {
+                e.preventDefault()
+                const producto = {
+                        nombre,
+                        precio,
+                        descripcion,
+                        cantidad,
+                        administrador: sessionStorage.getItem('idusuario')
+
+                }
+                const token = sessionStorage.getItem('token')
+                const respuesta = await axios.post("url", producto, {
+                        headers: {
+                                'autorizacion': token
+                        }
+                })
+                const mensaje = respuesta.data.mensaje
+                Swal.fire({
+                        icon: "success",
+                        title: mensaje,
+                        showConfirmButton: false
+                })
+                setTimeout(() => {
+                        window.location.href = "/producto"
+                }, 1500)
+
+        }
+
+
+        const buscar = async (e) => {
+                if (e.target.value === "") {
+                        obtenerProductos()
+                }
+                const buscar = e.target.value
+                console.log(buscar)
+                const token = sessionStorage.getItem('token')
+                const respuesta = await axios.get('http://localhost:4000/empleados/buscar/' + buscar, {
+                        headers: { 'autorizacion': token }
+                })
+                setProductos(respuesta.data)
+
+
+        }
+
         return (
                 <div>
                         <NavbarVentasoft />
-                        <body className="body">
+                        <h2 align="center" className="subtitulo"> Gestion de productos </h2>
 
-                                <section id="Titulares">
-                                        <h2 align="center" className="subtitulo"> Gestion de productos </h2>
-                                </section>
 
-                                <nav className="nav py-4">
-                                        <div className="container">
-                                                <div className="col-md-3">
-                                                        <Link to="/" className="btn btn-primary btn-block" data-toggle="modal" data-target="#addProducto"> Añadir empleado</Link>
-                                                </div>
-                                                <div className="col-md-6 ml-auto" >
-                                                        <div className="input-group">
-                                                                <datalist id="listaventa">
-                                                                        <option value="Identificador de producto"></option>
-                                                                        <option value="Descripcion de producto"></option>
-                                                                </datalist>
-                                                                <input className="form-control" type="search" placeholder="buscar" />
-                                                        </div>
-                                                </div>
-
+                        <nav className="nav py-4">
+                                <div className="container">
+                                        <div className="col-md-3">
+                                                <button type="button" className="btn btn-primary my-1" data-bs-toggle="modal" data-bs-target="#addProductos">
+                                                        Añadir un nuevo producto
+                                                </button>
                                         </div>
-                                </nav>
+                                        <div className="col-md-6 ml-auto" >
+                                                <div className="input-group">
+                                                        <select className="form-select" id="inputGroupSelect01">
+                                                                <option selected defaultValue>Buscar por...</option>
+                                                                <option value="1">Identificador de producto</option>
+                                                                <option value="2">Nombre del producto</option>
+                                                        </select>
+                                                        <input className="form-control" type="search" placeholder="buscar" onChange={(e) => buscar(e)} />
+                                                </div>
+                                        </div>
 
-                                <section id="Tabla">
-                                        <table className="centrar">
-                                                <thead>
-                                                        <tr>
-                                                                <th className="th">ID del producto </th>
-                                                                <th className="th"> Nombre del producto  </th>
-                                                                <th className="th">Descripcion  </th>
-                                                                <th className="th"> Cantidad </th>
-                                                                <th className="th"> Precio Unitario </th>
-                                                                <th className="th"> Acciones</th>
-                                                        </tr>
-                                                </thead>
+                                </div>
+                        </nav>
 
-                                                <tbody>
-                                                        {
-                                                                productos.map((producto, id) => {
-                                                                        <tr key={producto.id}>
+                        <section id="Tabla">
+                                <table className="centrar">
+                                        <thead>
+                                                <tr>
+                                                        <th className="th">ID del producto </th>
+                                                        <th className="th"> Nombre del producto  </th>
+                                                        <th className="th">Descripcion  </th>
+                                                        <th className="th"> Cantidad </th>
+                                                        <th className="th"> Precio Unitario </th>
+                                                        <th className="th"> Acciones</th>
+                                                </tr>
+                                        </thead>
+
+                                        <tbody>
+                                                {
+                                                        // eslint-disable-next-line array-callback-return
+                                                        productos.map((producto, id) => {
+                                                                <tr key={producto.id}>
                                                                         <td id="celda1-0" className="td">
                                                                                 {producto.id}
                                                                         </td>
@@ -85,36 +139,71 @@ const MProductosTabla = () => {
                                                                                 {producto.precio}
                                                                         </td>
                                                                         <td id="celda1-5" className="td">
-                                                                                <button type="submit" className="botonTabla"> Actualizar </button>
+                                                                                <Link to={"/productoModificar" + producto.id} type="submit" className="botonTabla"> Editar </Link>
 
                                                                         </td>
                                                                 </tr>
-                                                                })
+                                                        })
 
-                                                        }
-
-
-
-                                                </tbody>
-
-                                        </table>
-                                </section>
+                                                }
 
 
-                        </body>
+
+                                        </tbody>
+
+                                </table>
+                        </section>
+
+
+
 
 
                         {/* modal */}
-                        <div className="modal fade" id="addProducto">
-                                <div className="modal-dialog">
+                        <div className="modal fade" id="addProductos" tabindex="-1" aria-labelledby="addVentasLabel" aria-hidden="true">
+                                <div className="modal-dialog modal-lg">
                                         <div className="modal-content">
-                                                <div className="modal-header">
+                                                <div className="modal-header bg-primary text-white">
                                                         <h5 className="modal-title">
                                                                 Añadir producto
                                                         </h5>
-                                                        <button className="close">
+                                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div className="modal-body">
+                                                        <form onSubmit={guardar}>
+                                                                <div className="form-group">
+                                                                        <label htmlFor="">Nombres</label>
+                                                                        <input type="text" name="nombre" className="form-control"
+                                                                                onChange={(e) => setNombre(e.target.value)} required />
 
-                                                        </button>
+                                                                </div>
+                                                                <div className="form-group">
+                                                                        <label htmlFor=""> Descripcion </label>
+                                                                        <input type="text" name="descripcion" className="form-control"
+                                                                                onChange={(e) => setDescripcion(e.target.value)} required />
+
+                                                                </div>
+                                                                <div className="form-group">
+                                                                        <label htmlFor="">Precio </label>
+                                                                        <input type="text" name="precio" className="form-control"
+                                                                                onChange={(e) => setPrecio(e.target.value)} required />
+
+                                                                </div>
+                                                                <div className="form-group">
+                                                                        <label htmlFor=""> Cantidad </label>
+                                                                        <input type="text" name="cantidad" className="form-control"
+                                                                                onChange={(e) => setCantidad(e.target.value)} required />
+
+                                                                </div>
+                                                                <div className="form-group">
+                                                                        <button className="btn btn-primary" type="submit">
+                                                                                Guardar
+                                                                        </button>
+
+                                                                </div>
+
+
+                                                        </form>
+
                                                 </div>
                                         </div>
                                 </div>
