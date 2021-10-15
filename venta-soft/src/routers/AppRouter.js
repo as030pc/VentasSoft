@@ -15,10 +15,13 @@ import MproductosCrear from '../pages/MproductosNuevoProducto'
 import MProductosTabla from '../pages/MProductosTabla'
 import MVentasLista from 'pages/MVentasLista'
 import MVentasModificar from 'pages/MVentasModificar'
-import NavbarVentasoft from 'Layout/NavbarVentasoft'
-import Footer from 'Layout/footerBar'
+//import NavbarVentasoft from 'Layout/NavbarVentasoft'
+//import Footer from 'Layout/footerBar'
 import MVentasNueva from 'pages/MVentasNueva'
 import MproductosModificar from 'pages/MproductosModificar'
+import MVentas from 'pages/MVentas'
+import MIndexVentas from 'pages/MIndexVentas'
+import Actualizar from 'pages/Actualizar'
 
 
 const AppRouter = () => {
@@ -45,7 +48,7 @@ const AppRouter = () => {
                     <Route exact path = "/crearProducto"  >
                         <MproductosCrear/>
                     </Route>
-                    <Route exact path = "/ventas"  >
+                    <Route exact path = "/ventasLista"  >
                         <MVentasLista/>
                     </Route>
                     <Route exact path = "/ventasModificar"  >
@@ -54,19 +57,23 @@ const AppRouter = () => {
                     <Route exact path = "/productoModificar"  >
                         <MproductosModificar/>
                     </Route>
-
                     <Route exact path = "/ventasNueva"  >
                         <MVentasNueva/>
                     </Route>
-                   
+                    <Route exact path="/ventas"  >
+                        <MVentas />
+                    </Route>
+                    <Route exact path="/ventasIndex"  >
+                        <MIndexVentas />
+                    </Route>
+                    <Route exact path="/ventasAcualizar"  >
+                        <Actualizar />
+                    </Route>
+
                     <Redirect to="/" />
-
                 </Switch>
-          
-
-            </Router>
-        
-
+       
+            </Router>    
             
         </div>
     )

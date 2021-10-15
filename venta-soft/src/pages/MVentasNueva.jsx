@@ -44,7 +44,7 @@ const MVentasNueva = () => {
 
 
                         <div id="clientes"><br/>
-                        <label for="idCliente">Identificación cliente</label><br/>
+                        <label for="clienteId">Identificación cliente</label><br/>
                         <input type ="number" class ="id" name="" placeholder="Identificación cliente" /><br/>
 
                         <label for="nombreCliente">Nombre cliente</label><br/>

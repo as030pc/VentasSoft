@@ -72,7 +72,7 @@ const MVentasNueva = () => {
 
 
                         <div id="clientes"><br />
-                            <label for="idCliente" >Identificación cliente</label>
+                            <label for="clienteId" >Identificación cliente</label>
                             <input onChange={(e) => {
                                 console.log("Codigo: ", e.target.value)
                             }} type="codigo-producto" class="controls" name="" placeholder="Identificación cliente" />

@@ -18,7 +18,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">REGISTRO DE LAS VENTAS</h5>
                             <p className ="card-text">Para ingresar una nueva venta pulse en IR.</p>
-                            <Link to="/ventasNueva" href="dirige al modal de registro de ventas" className ="btn btn-primary">IR</Link>
+                            <Link to="/ventas" href="dirige al modal de registro de ventas" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ const MHome = () => {
                             <div className ="card-body">
                             <h5 className ="card-title">ESTADO DE lAS VENTAS</h5>
                             <p className ="card-text">Consulta el estado de las ventas dando clic en IR.</p>
-                            <Link to="/ventas" href="dirige al modal de estado de ventas" className ="btn btn-primary">IR</Link>
+                                <Link to="/ventasIndex" href="dirige al modal de estado de ventas" className ="btn btn-primary">IR</Link>
                             </div>
                         </div>
                     </div>
